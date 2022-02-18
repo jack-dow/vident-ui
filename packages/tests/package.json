@@ -1,0 +1,26 @@
+{
+  "name": "@vident-ui/tests",
+  "private": true,
+  "version": "0.0.7",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "author": "Jack Dow",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
+  "peerDependencies": {
+    "jest-axe": ">=4.1.0",
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@vident-ui/tsconfig": "workspace:*",
+    "@vident-ui/eslint-config": "workspace:*",
+    "@vident-ui/theme": "workspace:*",
+    "react": "^17.0.2",
+    "jest-axe": "^5.0.1"
+  },
+  "dependencies": {},
+  "description": ""
+}
