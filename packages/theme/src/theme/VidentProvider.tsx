@@ -1,9 +1,8 @@
 import React, { createContext, useContext, useEffect, useMemo } from 'react';
-import { useSSR } from '@vident-ui/hooks';
 
 import PreflightCSS from './preflight-css';
 import { merge } from '../utils/merge';
-import { baseTheme } from './stitches.config';
+import { baseTheme, createTheme } from './stitches.config';
 import { mode, rgba, get, linearGradient, radialGradient } from './utils';
 
 import type { Defaults, DefaultsOverride, Theme, Utils, CSSObject } from './types';
@@ -33,7 +32,7 @@ const defaults: Defaults = {
 export const DEFAULT_THEME = merge(baseTheme, defaults, { isDarkMode: undefined });
 
 const DEFAULT_UTILS = {
-  mode: (light, dark) => mode(light, dark)(DEFAULT_THEME),
+  mode: (light: any, dark: any) => mode(light, dark)(DEFAULT_THEME),
   rgba: (color: string, alpha: number) => rgba(color, alpha)(DEFAULT_THEME),
   get,
   linearGradient,
@@ -75,10 +74,7 @@ export function useVidentHelpers() {
 interface ProviderProps {
   theme?: string;
   themes?: {
-    base?: string;
-    light?: string;
-    dark?: string;
-    [key: string]: string;
+    [key: string]: ReturnType<typeof createTheme>;
   };
   styles?: ProviderStyles;
   defaults?: DefaultsOverride;
@@ -96,11 +92,12 @@ export function VidentProvider({
   defaults: userDefaults = {},
   children,
 }: ProviderProps) {
-  const { isBrowser } = useSSR();
+  const isBrowser =
+    typeof window !== 'undefined' && window.document && window.document.documentElement;
 
   useEffect(() => {
     if (!isBrowser || !userThemes) return;
-    setTheme(userThemes[currentTheme] || 'system', userThemes.base);
+    setTheme(userThemes[currentTheme].className || 'system', userThemes.base);
   }, [isBrowser, currentTheme, userThemes]);
 
   const providerValue = useMemo(() => {
@@ -113,7 +110,7 @@ export function VidentProvider({
       }
     );
     const utils = {
-      mode: (light, dark) => mode(light, dark)(mergedTheme),
+      mode: (light: any, dark: any) => mode(light, dark)(mergedTheme),
       rgba: (color: string, alpha: number) => rgba(color, alpha)(mergedTheme),
       get,
       linearGradient,

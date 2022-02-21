@@ -43,11 +43,11 @@ export function useResizeObserver<T extends HTMLElement = any>() {
 
   useEffect(() => {
     if (ref.current) {
-      observer.observe(ref.current);
+      observer?.observe(ref.current);
     }
 
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
 
       if (frameID.current) {
         cancelAnimationFrame(frameID.current);

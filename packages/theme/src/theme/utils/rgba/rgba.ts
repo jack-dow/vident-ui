@@ -8,12 +8,13 @@ export const rgba = (color: string, alpha: number) => (theme: Theme) => {
   }
 
   let _color = color;
+  if (theme.colors) {
+    if (_color.includes('$')) {
+      _color = color.replace('$', '');
+    }
 
-  if (_color.includes('$')) {
-    _color = color.replace('$', '');
+    _color = _color in theme.colors ? theme.colors[_color].value : _color;
   }
-
-  _color = _color in theme.colors ? theme.colors[_color].value : _color;
 
   const { r, g, b } = toRgba(_color);
   return `rgba(${r}, ${g}, ${b}, ${alpha})`;

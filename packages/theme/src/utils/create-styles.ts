@@ -30,7 +30,7 @@ export function createStyles<Key extends string = string, Params = void>(
 
   function useStyles(params: Params, options?: UseStylesOptions<Key>) {
     const { theme, utils, styles, withoutClassNames } = useVidentContext();
-    const themeStyles = styles[options?.name];
+    const themeStyles = styles[options?.name || ''];
 
     let count = 0;
 
@@ -47,7 +47,7 @@ export function createStyles<Key extends string = string, Params = void>(
 
     const stylesObject = fromEntries(
       Object.keys(cssObject).map((key) => {
-        const mergedStyles = merge(cssObject[key], _themeStyles[key], _styles[key]);
+        const mergedStyles = merge(cssObject[key as Key], _themeStyles[key], _styles[key]);
         return [key, mergedStyles];
       })
     ) as Record<Key, any>;
@@ -55,8 +55,8 @@ export function createStyles<Key extends string = string, Params = void>(
     return {
       classes: mergeClassNames(
         stylesObject,
-        options?.classNames,
-        withoutClassNames ? null : options?.name
+        options?.classNames || {},
+        withoutClassNames ? undefined : options?.name
       ),
       cx,
       theme,

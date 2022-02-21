@@ -25,10 +25,10 @@ export function useUncontrolled<T>({
   // initialize state
   const modeRef = useRef<UncontrolledMode>('initial');
   const initialValue = rule(defaultValue) ? defaultValue : finalValue;
-  const [uncontrolledValue, setUncontrolledValue] = useState(initialValue);
+  const [uncontrolledValue, setUncontrolledValue] = useState(initialValue || null);
 
   // compute effective value
-  let effectiveValue = shouldBeControlled ? value : uncontrolledValue;
+  let effectiveValue = shouldBeControlled && value ? value : uncontrolledValue;
 
   if (!shouldBeControlled && modeRef.current === 'controlled') {
     // We are transitioning from controlled to uncontrolled

@@ -1,44 +1,61 @@
 import React from 'react';
-const { CssBaseline } = require('@vident-ui/core');
+import { useDarkMode } from 'storybook-dark-mode';
+import { createTheme, VidentProvider, Box, globalCss } from '@vident-ui/core';
 
-export const decorators = [
-  (Story) => (
-    <div
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'flex-start',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-        width: '100%',
-        height: '100%'
-      }}
-    >
-      <CssBaseline />
-      <Story />
-    </div>
-  )
-];
+export const parameters = { layout: 'fullscreen' };
 
-export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
-  backgrounds: {
-    default: 'light',
-    values: [
-      {
-        name: 'light',
-        value: '#FFFFFF'
-      },
-      {
-        name: 'dark',
-        value: '#000000'
-      }
-    ]
+const bodyStyles = globalCss({
+  body: {
+    bgColor: '$bodyBg',
+    minHeight: '100vh',
+    p: '$8 !important',
+    fontFamily: '$inter',
   },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/
-    }
-  }
-};
+});
+
+function ThemeWrapper(props) {
+  bodyStyles();
+
+  const baseTheme = createTheme({
+    type: 'base',
+    theme: {
+      fonts: {
+        inter:
+          'Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      },
+    },
+  });
+
+  const lightTheme = createTheme({
+    type: 'light',
+    theme: {
+      colors: {
+        brand: '#abce11',
+        bodyBg: '$gray50',
+      },
+    },
+  });
+
+  const darkTheme = createTheme({
+    type: 'dark',
+    theme: {
+      colors: {
+        bodyBg: '$gray900',
+      },
+      '': {
+        ringOffsetColor: '$colors$gray900',
+      },
+    },
+  });
+
+  return (
+    <VidentProvider
+      theme={useDarkMode() ? 'dark' : 'light'}
+      themes={{ base: baseTheme.className, light: lightTheme.className, dark: darkTheme.className }}
+    >
+      {props.children}
+    </VidentProvider>
+  );
+}
+
+export const decorators = [(renderStory) => <ThemeWrapper>{renderStory()}</ThemeWrapper>];

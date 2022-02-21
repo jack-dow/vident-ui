@@ -461,10 +461,9 @@ const defaultMedia = {
   light: '(prefers-color-scheme: light)',
 };
 
-export const defaultTextSizes: Record<
-  keyof typeof defaultTokens.fontSizes,
-  Record<'fontSize' | 'lineHeight', string>
-> = {
+export const defaultTextSizes: {
+  [key in keyof typeof defaultTokens.fontSizes]: { fontSize: string; lineHeight: string };
+} = {
   xs: {
     fontSize: '$xs',
     lineHeight: '$4',
@@ -675,8 +674,11 @@ const defaultUtils = {
   }),
 
   // Util to add both line height and text size at once
+
   text: (value: PropertyValue<'fontSize'>) => ({
-    ...(defaultTextSizes[value.toString()] ?? { fontSize: value }),
+    ...(defaultTextSizes[value?.toString() as keyof typeof defaultTextSizes] ?? {
+      fontSize: value,
+    }),
   }),
 
   // Spacing utils

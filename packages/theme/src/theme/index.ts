@@ -1,6 +1,5 @@
 export * from './types';
 export * from './utils';
-export x from "./p";
 
 export { DEFAULT_COLORS } from './default-theme';
 

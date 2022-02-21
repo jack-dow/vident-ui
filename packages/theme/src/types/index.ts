@@ -1,5 +1,5 @@
 export * as Polymorphic from './polymorphic';
-export {
+export type {
   Prefixed,
   Primitive,
   Simplify,

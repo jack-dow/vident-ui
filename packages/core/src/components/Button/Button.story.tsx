@@ -2,7 +2,6 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { DEFAULT_COLORS, createStyles, VidentProvider } from '@vident-ui/theme';
 import { generateBorderStyles } from '@vident-ui/utils';
-import { useDarkMode } from 'storybook-dark-mode';
 import { ExternalLinkIcon, CalendarIcon } from '@heroicons/react/outline';
 
 import { Box } from '../Box';
@@ -66,7 +65,6 @@ storiesOf('@vident-ui/core/Button/stories', module)
       <Group>{getThemes({ variant: 'default' })}</Group>
       <Group
         css={{
-          backgroundColor: useDarkMode() ? '$gray-900' : '$gray-200',
           px: '$2',
           py: '$2_5',
           ml: '-$2',

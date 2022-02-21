@@ -2,7 +2,7 @@ import { create } from '@storybook/theming';
 
 export default create({
   base: 'light',
-  brandTitle: 'NextUI',
-  brandUrl: 'https://nextui.org',
+  brandTitle: 'vident-ui',
+  // brandUrl: 'https://nextui.org',
   //   brandImage: 'https://nextui.org/logotipo.svg',
 });

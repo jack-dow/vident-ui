@@ -1,5 +1,6 @@
 import clsx from './clsx';
 import { css } from '../theme/stitches.config';
+import type { CSSObject } from '../theme';
 import { merge } from './merge';
 
 const isObject = (obj: any) => {
@@ -15,18 +16,19 @@ const isObject = (obj: any) => {
   return false;
 };
 
-export const cx = (...args: any) => {
-  const objects = [];
-  const classNames = [];
-  const refs = [];
+export const cx = (...args: (CSSObject | string | undefined)[]) => {
+  const objects: CSSObject[] = [];
+  const classNames: string[] = [];
+  const refs: string[] = [];
 
-  function sortArgs(arg) {
+  function sortArgs(arg: (CSSObject | string | undefined)[] | CSSObject | string | undefined) {
     if (Array.isArray(arg)) {
       arg.forEach((el) => sortArgs(el));
     }
     if (isObject(arg)) {
-      objects.push(arg);
-      if (arg.ref) refs.push(arg.ref);
+      const _arg = arg as CSSObject;
+      objects.push(_arg);
+      if (_arg.ref && typeof _arg.ref === 'string') refs.push(_arg.ref);
     }
     if (typeof arg === 'string') classNames.push(arg);
   }

@@ -1,15 +1,46 @@
-export const get = (path: string | number | string[], object: object, defaultValue?: any) => {
-  if (!path) return path;
-  if (typeof path === 'number') return path;
-  const _path = Array.isArray(path) ? path : path.split('.');
+type GetIndexedField<T, K> = K extends keyof T
+  ? T[K]
+  : K extends `${number}`
+  ? '0' extends keyof T
+    ? undefined
+    : number extends keyof T
+    ? T[number]
+    : undefined
+  : undefined;
 
-  if (object && _path.length) {
-    return get(_path, object[_path.shift()], defaultValue);
-  }
+type FieldWithPossiblyUndefined<T, Key> =
+  | GetFieldType<Exclude<T, undefined>, Key>
+  | Extract<T, undefined>;
 
-  if (object === undefined) {
-    if (defaultValue) return defaultValue;
-    return path;
-  }
-  return object;
-};
+type IndexedFieldWithPossiblyUndefined<T, Key> =
+  | GetIndexedField<Exclude<T, undefined>, Key>
+  | Extract<T, undefined>;
+
+export type GetFieldType<T, P> = P extends `${infer Left}.${infer Right}`
+  ? Left extends keyof T
+    ? FieldWithPossiblyUndefined<T[Left], Right>
+    : Left extends `${infer FieldKey}[${infer IndexKey}]`
+    ? FieldKey extends keyof T
+      ? FieldWithPossiblyUndefined<IndexedFieldWithPossiblyUndefined<T[FieldKey], IndexKey>, Right>
+      : undefined
+    : undefined
+  : P extends keyof T
+  ? T[P]
+  : P extends `${infer FieldKey}[${infer IndexKey}]`
+  ? FieldKey extends keyof T
+    ? IndexedFieldWithPossiblyUndefined<T[FieldKey], IndexKey>
+    : undefined
+  : undefined;
+
+export function get<TData, TPath extends string, TDefault = GetFieldType<TData, TPath>>(
+  data: TData,
+  path: TPath,
+  defaultValue?: TDefault
+): GetFieldType<TData, TPath> | TDefault {
+  const value = path
+    .split(/[.[\]]/)
+    .filter(Boolean)
+    .reduce<GetFieldType<TData, TPath>>((value, key) => (value as any)?.[key], data as any);
+
+  return value !== undefined ? value : (defaultValue as TDefault);
+}

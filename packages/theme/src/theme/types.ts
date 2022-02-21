@@ -54,8 +54,8 @@ export type Color = LiteralUnion<typeof DEFAULT_COLORS[number], string>;
 export type CreateTheme = ReturnType<typeof createThemeBase>;
 export type ThemeType = 'base' | 'dark' | 'light';
 export type BaseTheme = ConfigType.Theme;
-export interface Theme extends AllowAnyObjectKeys<typeof config.theme>, Defaults {
-  isDarkMode: boolean;
+export interface Theme extends AllowAnyObjectKeys<BaseTheme>, Defaults {
+  isDarkMode: boolean | undefined;
 }
 export type ThemeExtension = {
   type: ThemeType | string;
