@@ -29,7 +29,7 @@ export interface ActionIconOwnProps extends Vident.DefaultProps<ActionIconStyles
 
 export const ActionIcon = React.forwardRef((props, ref) => {
   const {
-    as,
+    as = 'button',
     css,
     color = 'gray',
     children,

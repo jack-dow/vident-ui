@@ -14,7 +14,7 @@ const LOADERS = {
 
 export interface LoaderProps
   extends Vident.DefaultProps,
-    Omit<React.ComponentPropsWithoutRef<'svg'>, 'color'> {
+    Omit<React.ComponentPropsWithoutRef<'svg'>, 'color' | 'css'> {
   /** Defines width of loader */
   size?: Vident.ThemeToken<'space'>;
 
@@ -25,7 +25,7 @@ export interface LoaderProps
   variant?: Vident.LoaderType;
 }
 
-export function Loader({ size = '$6', color, variant, css, ...loaderProps }: LoaderProps) {
+export function Loader({ size = '$6', color, variant = 'oval', css, ...loaderProps }: LoaderProps) {
   const {
     theme,
     utils: { mode },

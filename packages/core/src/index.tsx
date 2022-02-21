@@ -1,3 +1,4 @@
+import * as React from 'react';
 export * from '@vident-ui/theme';
 
 export * from './components/ActionIcon';

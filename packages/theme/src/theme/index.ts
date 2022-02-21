@@ -12,6 +12,8 @@ export {
   baseTheme,
 } from './stitches.config';
 
+export { default as PreflightCSS } from './preflight-css';
+
 export {
   VidentProvider,
   useVidentContext,

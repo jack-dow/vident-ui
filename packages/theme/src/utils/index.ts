@@ -1,4 +1,5 @@
 export { createStyles } from './create-styles';
+export type { UseStylesOptions } from './create-styles';
 export { cx } from './cx';
 export { fromEntries } from './from-entries';
 export { getDefaultZIndex } from './get-default-z-index';

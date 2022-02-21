@@ -15,9 +15,9 @@
     "react": ">=16.8.0"
   },
   "devDependencies": {
-    "@vident-ui/tsconfig": "workspace:*",
-    "@vident-ui/eslint-config": "workspace:*",
-    "@vident-ui/theme": "workspace:*",
+    "@vident-ui/tsconfig": "*",
+    "@vident-ui/eslint-config": "*",
+    "@vident-ui/theme": "*",
     "react": "^17.0.2",
     "jest-axe": "^5.0.1"
   },

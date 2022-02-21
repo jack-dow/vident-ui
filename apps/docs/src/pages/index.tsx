@@ -1,10 +1,8 @@
-import { Button } from "@vident-ui/core";
-import { useIsomorphicLayoutEffect } from "@vident-ui/hooks";
+import { Button } from '@vident-ui/core';
+import {useBooleanToggle} from '@vident-ui/hooks';
 
 export default function Docs() {
-  useIsomorphicLayoutEffect(() => {
-    console.log("Vident docs page");
-  }, []);
+  const [checked, toggle] = useBooleanToggle();
   return (
     <div>
       <h1>Vident Documentation</h1>

@@ -48,7 +48,7 @@ export const Button = React.forwardRef((props, ref) => {
     as = 'button',
     children,
     classNames,
-    color,
+    color = 'sky',
     disabled,
     type = 'button',
     css,

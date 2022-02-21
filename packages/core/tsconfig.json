@@ -1,19 +1,5 @@
 {
   "extends": "@vident-ui/tsconfig/react-library.json",
   "include": ["."],
-  "exclude": ["dist", "build", "node_modules"],
-  "compilerOptions": {
-    "paths": {
-      "@vident-ui/hooks": ["../hooks/src"],
-      "@vident-ui/theme": ["../theme/src"],
-      "@vident-ui/tests": ["../tests/src"],
-      "@vident-ui/utils": ["../utils/src"]
-    }
-  },
-  "references": [
-    { "path": "../hooks" },
-    { "path": "../theme" },
-    { "path": "../tests" },
-    { "path": "../utils" }
-  ]
+  "exclude": ["dist", "build", "node_modules"]
 }
