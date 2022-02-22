@@ -24,7 +24,7 @@ export interface ContainerOwnProps extends Vident.DefaultProps {
 }
 
 export const Container = React.forwardRef((props, ref) => {
-  const { css, fluid, center, size, ...containerProps } = props;
+  const { css, fluid, center, size = 'md', ...containerProps } = props;
   const containerStyles = {
     maxWidth: fluid ? '100%' : get(size, breakpoints),
     mx: center ? 'auto' : undefined,

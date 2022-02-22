@@ -1,7 +1,7 @@
 import { createStyles } from '@vident-ui/theme';
 
 interface TitleStyles {
-  align: 'right' | 'left' | 'center' | 'justify';
+  align?: 'right' | 'left' | 'center' | 'justify';
 }
 
 export default createStyles(({ utils: { mode } }, { align }: TitleStyles) => ({

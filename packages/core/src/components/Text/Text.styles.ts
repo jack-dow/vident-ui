@@ -1,17 +1,17 @@
 import { createStyles, ThemeToken, CSSObject, linearGradient } from '@vident-ui/theme';
 
 interface TextStyles {
-  color: ThemeToken<'colors', string>;
+  color?: ThemeToken<'colors', string>;
   variant: 'text' | 'link' | 'gradient';
   size: ThemeToken<'fontSizes'>;
-  lineClamp: number;
+  lineClamp?: number;
   inline: boolean;
   inherit: boolean;
   gradientFrom: ThemeToken<'colors', string>;
   gradientTo: ThemeToken<'colors', string>;
-  gradientDeg: number;
-  transform: 'capitalize' | 'uppercase' | 'lowercase';
-  align: 'left' | 'center' | 'right' | 'justify';
+  gradientDeg?: number;
+  transform?: 'capitalize' | 'uppercase' | 'lowercase';
+  align?: 'left' | 'center' | 'right' | 'justify';
   weight: React.CSSProperties['fontWeight'];
 }
 
@@ -26,17 +26,17 @@ function getLineClamp(lineClamp: number): CSSObject {
     };
   }
 
-  return null;
+  return {};
 }
 
 export default createStyles(
   (
-    helpers,
+    { theme },
     {
-      color,
+      color = theme.colors?.gray400,
       variant,
       size,
-      lineClamp,
+      lineClamp = 3,
       inline,
       inherit,
       gradientDeg,

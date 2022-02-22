@@ -21,16 +21,7 @@ export interface PaperOwnProps extends Vident.DefaultProps {
 }
 
 export const Paper = React.forwardRef((props, ref) => {
-  const {
-    as,
-    css,
-    children,
-    padding = 0,
-    radius = '$base',
-    withBorder = false,
-    shadow,
-    ...paperProps
-  } = props;
+  const { as, css, children, padding, radius, shadow, withBorder, ...paperProps } = props;
   const { classes } = useStyles({ radius, shadow, padding, withBorder }, { name: 'Paper' });
 
   return (

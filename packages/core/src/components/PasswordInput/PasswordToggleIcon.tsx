@@ -3,7 +3,7 @@ import { EyeIcon, EyeOffIcon } from '@heroicons/react/outline';
 
 export interface PasswordToggleIconProps {
   reveal: boolean;
-  size: number;
+  size?: number;
 }
 
 export function PasswordToggleIcon({ reveal, size = 20 }: PasswordToggleIconProps) {

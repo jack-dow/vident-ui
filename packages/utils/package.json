@@ -1,6 +1,5 @@
 {
   "name": "@vident-ui/utils",
-  "private": true,
   "version": "0.0.7",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -24,6 +23,6 @@
   "scripts": {
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
     "test": "jest",
-    "clean": "rm -rf node_modules"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   }
 }

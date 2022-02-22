@@ -1,11 +1,11 @@
 import { createStyles } from '@vident-ui/theme';
 
 interface InputWrapperStyles {
-  hideLabel: boolean;
+  hideLabel?: boolean;
   hint: boolean;
 }
 
-export default createStyles((helpers, { hideLabel, hint }: InputWrapperStyles) => ({
+export default createStyles((helpers, { hideLabel = false, hint }: InputWrapperStyles) => ({
   root: {
     lineHeight: '$normal',
   },

@@ -6,13 +6,13 @@ export type InputVariant = 'default' | 'unstyled' | 'headless';
 export type InputSize = keyof typeof sizes;
 
 interface InputStyles {
-  invalidColor: ThemeToken<'colors', string>;
+  invalidColor?: ThemeToken<'colors', string>;
   variant: InputVariant;
   size: InputSize;
   leftIconPadding: ThemeToken<'space'>;
-  leftIconClickable: boolean;
+  leftIconClickable?: boolean;
   rightIconPadding: ThemeToken<'space'>;
-  rightIconClickable: boolean;
+  rightIconClickable?: boolean;
   left: React.ReactNode;
   right: React.ReactNode;
   radius: ThemeToken<'radii'>;
@@ -138,6 +138,8 @@ export default createStyles(
         backgroundColor: mode('$white', '$black'),
         ...focusStyles,
       },
+
+      headless: {},
 
       unstyled: {
         borderWidth: 0,

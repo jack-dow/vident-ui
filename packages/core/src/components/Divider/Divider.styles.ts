@@ -3,7 +3,7 @@ import { createStyles, ThemeToken } from '@vident-ui/theme';
 interface DividerStyles {
   size: ThemeToken<'space'>;
   variant: 'solid' | 'dashed' | 'dotted';
-  color: ThemeToken<'colors', string>;
+  color?: ThemeToken<'colors', string>;
 }
 
 export default createStyles(
@@ -26,6 +26,8 @@ export default createStyles(
         display: 'none',
       },
     },
+
+    center: {},
 
     label: {
       display: 'flex',

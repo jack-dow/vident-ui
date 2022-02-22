@@ -8,13 +8,13 @@ function generateUuid() {
   return defaultId.toString();
 }
 
-export function useId(id?: string, generateId: () => string = generateUuid) {
+export function useId(id?: string, generateId: () => string = generateUuid): string | undefined {
   const ready = useIsClient();
-  const [generatedId, setGeneratedId] = useState(ready ? generateId : null);
+  const [generatedId, setGeneratedId] = useState(ready ? generateId : undefined);
 
   useIsomorphicEffect(() => {
     if (generatedId === null) setGeneratedId(generateId());
   }, [generatedId]);
 
-  return id || generatedId != null ? generatedId : undefined;
+  return id || generatedId || undefined;
 }

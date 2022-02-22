@@ -1,14 +1,17 @@
 import { createStyles, ThemeToken } from '@vident-ui/theme';
 
 interface PaperStyles {
-  padding: ThemeToken<'space'>;
-  shadow: ThemeToken<'shadows', string>;
-  radius: ThemeToken<'radii'>;
-  withBorder: boolean;
+  padding?: ThemeToken<'space'>;
+  shadow?: ThemeToken<'shadows', string>;
+  radius?: ThemeToken<'radii'>;
+  withBorder?: boolean;
 }
 
 export default createStyles(
-  ({ utils: { mode } }, { radius, shadow, padding, withBorder }: PaperStyles) => ({
+  (
+    { utils: { mode } },
+    { radius = '$base', shadow = '$base', padding = 0, withBorder = false }: PaperStyles
+  ) => ({
     root: {
       WebkitTapHighlightColor: 'transparent',
       display: 'block',

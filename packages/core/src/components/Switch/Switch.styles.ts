@@ -3,7 +3,7 @@ import { createStyles, Color, ThemeToken, get } from '@vident-ui/theme';
 export type SwitchSizes = keyof typeof switchHeight;
 
 interface SwitchStyles {
-  color: Color;
+  color?: Color;
   size: SwitchSizes;
   radius: ThemeToken<'radii'>;
   checked: boolean;
@@ -33,18 +33,24 @@ const handleSizes = {
   xl: '$8',
 };
 
-export const sizes = Object.keys(switchHeight).reduce((acc, size) => {
-  acc[size] = { width: switchWidth[size], height: switchHeight[size] };
+export const sizes = Object.keys(switchHeight).reduce((acc: any, size) => {
+  acc[size] = {
+    width: switchWidth[size as keyof typeof switchWidth],
+    height: switchHeight[size as keyof typeof switchWidth],
+  };
   return acc;
 }, {} as Record<SwitchSizes, { width: number; height: number }>);
 
 export default createStyles(
-  ({ theme, utils: { mode } }, { size, color, radius, checked }: SwitchStyles) => ({
+  (
+    { theme, utils: { mode } },
+    { size, color = theme.primaryColor, radius, checked }: SwitchStyles
+  ) => ({
     root: {
       position: 'relative',
       display: 'inline-flex',
       appearance: 'none',
-      bg: checked ? `$${color || theme.primaryColor}600` : mode('$gray200', '$gray700'),
+      bg: checked ? `$${color}600` : mode('$gray200', '$gray700'),
       flexShrink: 0,
       width: get(size, switchWidth),
       height: get(size, switchHeight),

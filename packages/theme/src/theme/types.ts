@@ -83,7 +83,7 @@ export type DefaultsOverride = PartialDeep<Defaults>;
 
 export interface DefaultProps<T extends string = never> {
   className?: string;
-  css?: CSS | NestedArray<CSS>;
+  css?: CSS | NestedArray<CSS | undefined>;
   classNames?: Partial<Record<T, string>>;
   style?: CSSProperties;
   styles?:

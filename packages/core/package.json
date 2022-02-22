@@ -21,6 +21,7 @@
     "@stitches/core": "^1.2.6",
     "@vident-ui/hooks": "workspace:*",
     "@vident-ui/theme": "workspace:*",
+    "@vident-ui/utils": "workspace:*",
     "react-popper": "^2.2.5",
     "react-textarea-autosize": "^8.3.3"
   },
@@ -30,9 +31,7 @@
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
     "@vident-ui/eslint-config": "workspace:*",
-    "@vident-ui/tests": "workspace:*",
     "@vident-ui/tsconfig": "workspace:*",
-    "@vident-ui/utils": "workspace:*",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tsup": "^5.10.1",

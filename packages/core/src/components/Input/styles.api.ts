@@ -4,6 +4,7 @@ export const Input: Record<InputStylesNames, string> = {
   wrapper: 'Root Input element',
   default: 'Default input variant modifier',
   unstyled: 'Default input variant modifier',
+  headless: 'Default input variant modifier',
   invalid: 'Invalid input modifier',
   disabled: 'Invalid disabled modifier',
   leftIcon: 'Input icon wrapper on the left side of the input, controlled by leftIcon prop',
