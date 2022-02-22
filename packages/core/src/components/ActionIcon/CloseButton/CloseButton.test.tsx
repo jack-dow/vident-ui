@@ -4,7 +4,7 @@ import { checkAccessibility, itSupportsSystemProps, itSupportsFocusEvents } from
 import { CloseButton, CloseButtonProps } from './CloseButton';
 
 const defaultProps: CloseButtonProps = {};
- 
+
 describe('@vident-ui/core/CloseButton', () => {
   checkAccessibility([<CloseButton aria-label="test" />, <CloseButton title="test" />]);
   itSupportsFocusEvents(CloseButton, defaultProps, '.vident-ActionIcon-root');
