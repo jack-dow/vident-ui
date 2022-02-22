@@ -79,13 +79,13 @@ export interface StyleProps {
   size: keyof typeof sizes;
   gradientFrom: ThemeToken<'colors', string>;
   gradientTo: ThemeToken<'colors', string>;
-  gradientDeg: number;
+  gradientDeg?: number;
 }
 
 export default createStyles(
   (
     { theme, utils },
-    { color: userColor, size, gradientFrom, gradientTo, gradientDeg }: StyleProps,
+    { color: userColor, size, gradientFrom, gradientTo, gradientDeg = 45 }: StyleProps,
     getRef
   ) => {
     const loading = getRef('loading');

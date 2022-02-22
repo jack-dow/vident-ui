@@ -6,7 +6,7 @@ import {
   itSupportsSystemProps,
   itSupportsFocusEvents,
   itSupportsInputProps,
-} from '@vident-ui/tests';
+} from '@vident-ui/utils';
 import { TextInput, TextInputProps } from './TextInput';
 
 const defaultProps: TextInputProps = {};

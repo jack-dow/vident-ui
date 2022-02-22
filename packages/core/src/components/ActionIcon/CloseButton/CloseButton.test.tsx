@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { checkAccessibility, itSupportsSystemProps, itSupportsFocusEvents } from '@vident-ui/tests';
+import { checkAccessibility, itSupportsSystemProps, itSupportsFocusEvents } from '@vident-ui/utils';
 import { CloseButton, CloseButtonProps } from './CloseButton';
 
 const defaultProps: CloseButtonProps = {};
@@ -18,7 +18,7 @@ describe('@vident-ui/core/CloseButton', () => {
   it('sets width and height on CloseIcon based on iconSize prop', () => {
     const { container } = render(<CloseButton iconSize={45} />);
     const svg = container.querySelector('svg');
-    expect(svg.getAttribute('width')).toBe('45');
-    expect(svg.getAttribute('height')).toBe('45');
+    expect(svg?.getAttribute('width')).toBe('45');
+    expect(svg?.getAttribute('height')).toBe('45');
   });
 });

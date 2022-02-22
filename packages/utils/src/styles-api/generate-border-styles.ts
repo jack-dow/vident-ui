@@ -25,7 +25,7 @@ const _colors = [
 const colors = [..._colors, ..._colors, ..._colors];
 
 export function generateBorderStyles(stylesApi: Record<string, any>) {
-  return Object.keys(stylesApi).reduce((acc, key, index) => {
+  return Object.keys(stylesApi).reduce((acc: Record<string, any>, key, index) => {
     acc[key] = { border: `1px solid ${colors[index]}` };
     return acc;
   }, {});

@@ -6,7 +6,7 @@ import {
   itConnectsLabelAndInput,
   itSupportsWrapperProps,
   itSupportsFocusEvents,
-} from '@vident-ui/tests';
+} from '@vident-ui/utils';
 import { Switch, SwitchProps } from './Switch';
 
 const defaultProps: SwitchProps = {

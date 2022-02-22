@@ -13,4 +13,4 @@ export { itSupportsRef } from './it-supports-ref';
 export { itSupportsStyle } from './it-supports-style';
 export { itSupportsSystemProps } from './it-supports-system-props';
 export { itSupportsWrapperProps } from './it-supports-wrapper-props';
-export { renderWithAct, actAsync } from './render-with-act';
+// export { render, actAsync } from './render-with-act';

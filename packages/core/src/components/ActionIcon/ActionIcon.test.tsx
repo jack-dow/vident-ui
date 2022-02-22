@@ -6,7 +6,7 @@ import {
   itIsPolymorphic,
   itSupportsFocusEvents,
   itSupportsSystemProps,
-} from '@vident-ui/tests';
+} from '@vident-ui/utils';
 import { ActionIcon } from './ActionIcon';
 
 const defaultProps: React.ComponentProps<typeof ActionIcon> = { children: <div /> };

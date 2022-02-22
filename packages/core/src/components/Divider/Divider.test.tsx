@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { itSupportsSystemProps } from '@vident-ui/tests';
+import { itSupportsSystemProps } from '@vident-ui/utils';
 import { Divider, DividerProps } from './Divider';
 
 const defaultProps: DividerProps = {};

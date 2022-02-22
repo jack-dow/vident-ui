@@ -1,5 +1,5 @@
 import React from 'react';
-import { itSupportsSystemProps } from '@vident-ui/tests';
+import { itSupportsSystemProps } from '@vident-ui/utils';
 import { render } from '@testing-library/react';
 import { Loader } from './Loader';
 

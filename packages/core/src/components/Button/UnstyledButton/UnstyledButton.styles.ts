@@ -6,7 +6,7 @@ export default createStyles(({ theme, utils: { mode } }) => ({
     border: 0,
     padding: 0,
     appearance: 'none',
-    fontSize: theme.fontSizes.md,
+    fontSize: theme.fontSizes?.md,
     backgroundColor: 'transparent',
     textAlign: 'left',
     color: mode('$black', '$gray-50'),

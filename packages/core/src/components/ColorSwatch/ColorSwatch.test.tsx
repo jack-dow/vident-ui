@@ -1,4 +1,4 @@
-import { itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/tests';
+import { itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/utils';
 import { ColorSwatch } from './ColorSwatch';
 
 const defaultProps: React.ComponentProps<typeof ColorSwatch> = {

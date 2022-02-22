@@ -1,4 +1,4 @@
-import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/tests';
+import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/utils';
 import { Title, TitleProps } from './Title';
 
 const defaultProps: TitleProps = {};

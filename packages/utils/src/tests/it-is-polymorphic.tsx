@@ -8,7 +8,9 @@ export function itIsPolymorphic(
 ) {
   it('is polymorphic', () => {
     const getTarget = (container: HTMLElement): HTMLElement =>
-      selector ? container.querySelector(selector) : (container.firstChild as HTMLElement);
+      selector
+        ? (container.querySelector(selector) as HTMLElement)
+        : (container.firstChild as HTMLElement);
     const { container: withTag } = render(
       <Component as="a" href="https://google.com.au" {...requiredProps} />
     );

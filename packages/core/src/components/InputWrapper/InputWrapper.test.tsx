@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/tests';
+import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/utils';
 import { InputWrapper, InputWrapperProps } from './InputWrapper';
 
 const defaultProps: InputWrapperProps = {

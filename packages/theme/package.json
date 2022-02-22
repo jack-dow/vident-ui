@@ -18,13 +18,13 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "@vident-ui/hooks": "*",
+    "@vident-ui/hooks": "workspace:*",
     "@stitches/core": "^1.2.6",
     "csstype": "^3.0.10"
   },
   "devDependencies": {
-    "@vident-ui/tsconfig": "*",
-    "@vident-ui/eslint-config": "*",
+    "@vident-ui/tsconfig": "workspace:*",
+    "@vident-ui/eslint-config": "workspace:*",
     "@types/react": "^17.0.13",
     "@types/react-dom": "^17.0.8",
     "react": "^17.0.2",

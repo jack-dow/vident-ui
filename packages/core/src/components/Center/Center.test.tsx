@@ -1,4 +1,4 @@
-import { itRendersChildren, itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/tests';
+import { itRendersChildren, itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/utils';
 import { Center } from './Center';
 
 const defaultProps: React.ComponentProps<typeof Center> = {

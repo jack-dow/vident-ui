@@ -1,5 +1,5 @@
 import React from 'react';
-import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/tests';
+import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/utils';
 import { Container } from './Container';
 
 const defaultProps: React.ComponentProps<typeof Container> = {};

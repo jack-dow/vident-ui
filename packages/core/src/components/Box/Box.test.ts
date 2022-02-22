@@ -1,4 +1,4 @@
-import { itRendersChildren, itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/tests';
+import { itRendersChildren, itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/utils';
 import { Box } from './Box';
 
 describe('@vident-ui/core/Box', () => {

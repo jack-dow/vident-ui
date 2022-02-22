@@ -1,4 +1,4 @@
-import { itRendersChildren, itSupportsFocusEvents, itSupportsSystemProps } from '@vident-ui/tests';
+import { itRendersChildren, itSupportsFocusEvents, itSupportsSystemProps } from '@vident-ui/utils';
 import { UnstyledButton, UnstyledButtonProps } from './UnstyledButton';
 
 const defaultProps: UnstyledButtonProps = {};
