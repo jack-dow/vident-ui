@@ -1,5 +1,12 @@
 {
   "extends": "@vident-ui/tsconfig/react-library.json",
   "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "exclude": ["dist", "build", "node_modules"],
+  "compilerOptions": {
+    "paths": {
+      // Emotion typedefs now point to an empty file, which unsets all declarations
+      "@emotion/core": ["../../configuration/types/emotion/index.d.ts"],
+      "@storybook/react":["../storybook/node_modules/@storybook/react"]
+    }
+  }
 }
