@@ -43,6 +43,9 @@ export interface ButtonOwnProps extends Vident.DefaultProps<ButtonStylesNames> {
   /** Controls button appearance */
   variant?: ButtonVariant;
 }
+
+export type ButtonProps = React.ComponentProps<typeof Button>;
+
 export const Button = React.forwardRef((props, ref) => {
   const {
     as = 'button',

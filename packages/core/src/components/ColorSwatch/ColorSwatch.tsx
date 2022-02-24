@@ -12,9 +12,6 @@ export interface ColorSwatchOwnProps extends Vident.DefaultProps {
 
   /** Predefined border-radius value from theme or any valid border-radius value */
   radius?: Vident.ThemeToken<'radii'>;
-
-  /** Elements rendered within ColorSwatch */
-  children?: React.ReactNode;
 }
 
 export const ColorSwatch = React.forwardRef((props, ref) => {

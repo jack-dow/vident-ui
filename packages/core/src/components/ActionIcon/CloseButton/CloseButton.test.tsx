@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { checkAccessibility, itSupportsSystemProps, itSupportsFocusEvents } from '@vident-ui/utils';
+import { checkAccessibility, itSupportsSystemProps, itSupportsFocusEvents } from '@vident-ui/testing';
 import { CloseButton, CloseButtonProps } from './CloseButton';
 
 const defaultProps: CloseButtonProps = {};

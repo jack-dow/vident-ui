@@ -1,2 +1,2 @@
-export * from './styles-api';
-export * from './tests';
+export { generateBorderStyles } from './generate-border-styles';
+export { InputStylesApiWrapper } from './InputStylesApiWrapper/InputStylesApiWrapper';

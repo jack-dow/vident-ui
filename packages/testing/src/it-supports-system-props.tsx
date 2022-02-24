@@ -5,7 +5,7 @@ import { itSupportsOthers } from './it-supports-others';
 // import { itSupportsCss } from './it-supports-css';
 import { itSupportsRef } from './it-supports-ref';
 
-interface Options<T extends React.FC> {
+interface Options<T extends React.FC<React.ComponentProps<T>>> {
   component: T;
   props: React.ComponentProps<T>;
   displayName?: string;
@@ -13,7 +13,7 @@ interface Options<T extends React.FC> {
   refType?: any;
 }
 
-export function itSupportsSystemProps<T extends React.FC>(options: Options<T>) {
+export function itSupportsSystemProps<T extends React.FC<React.ComponentProps<T>>>(options: Options<T>) {
   const shouldExcludeOthers = options.excludeOthers || false;
 
   options.refType && itSupportsRef(options.component, options.props, options.refType);

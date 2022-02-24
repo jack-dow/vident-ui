@@ -1,16 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { DEFAULT_COLORS, createStyles, VidentProvider } from '@vident-ui/theme';
-// import { generateBorderStyles } from '@vident-ui/utils';
+import { generateBorderStyles } from '@vident-ui/utils';
 import { ExternalLinkIcon, CalendarIcon } from '@heroicons/react/outline';
 
 import { Box } from '../Box';
 import { Group } from '../Group';
-import { Button, ButtonSizes } from './Button';
+import { Button, ButtonSizes, ButtonProps } from './Button';
 import { Button as ButtonStylesApi } from './styles.api';
 import { UnstyledButton } from './UnstyledButton/UnstyledButton';
-
-type ButtonProps = React.ComponentProps<typeof Button>;
 
 const getThemes = (props?: Partial<ButtonProps>) => (
   <>
@@ -129,39 +127,39 @@ storiesOf('@vident-ui/core/Button/stories', module)
     </div>
   ));
 
-// const styles = generateBorderStyles(ButtonStylesApi);
-// const useStyles = createStyles(() => styles);
+const styles = generateBorderStyles(ButtonStylesApi);
+const useStyles = createStyles(() => styles);
 
-// const variants = ['filled', 'outline', 'light', 'gradient', 'white', 'default'] as const;
+const variants = ['filled', 'outline', 'light', 'gradient', 'white', 'default'] as const;
 
-// function Wrapper(props: Partial<ButtonProps>) {
-//   const items = variants.map((variant) => (
-//     <Button key={variant} variant={variant} rightIcon="R" leftIcon="L" {...props}>
-//       {variant}
-//     </Button>
-//   ));
-//   return (
-//     <Group position="center" css={{ pt: '$4', backgroundColor: 'rgba(0, 0, 0, .1)' }}>
-//       {items}
-//     </Group>
-//   );
-// }
+function Wrapper(props: Partial<ButtonProps>) {
+  const items = variants.map((variant) => (
+    <Button key={variant} variant={variant} rightIcon="R" leftIcon="L" {...props}>
+      {variant}
+    </Button>
+  ));
+  return (
+    <Group position="center" css={{ pt: '$4', backgroundColor: 'rgba(0, 0, 0, .1)' }}>
+      {items}
+    </Group>
+  );
+}
 
-// function WithClassNames() {
-//   return <Wrapper classNames={useStyles(null).classes} />;
-// }
+function WithClassNames() {
+  return <Wrapper classNames={useStyles(null).classes} />;
+}
 
-// storiesOf('@vident-ui/core/Button/styles-api', module)
-//   .add('With css', () => <Wrapper css={{ border: '1px solid red', backgroundColor: 'blue' }} />)
-//   .add('With styles as object', () => <Wrapper styles={styles} />)
-//   .add('With styles as function', () => <Wrapper styles={() => styles} />)
-//   .add('With styles as classNames', () => <WithClassNames />)
-//   .add('Styles API on VidentProvider', () => (
-//     <VidentProvider styles={{ Button: () => styles }}>
-//       <Wrapper />
-//     </VidentProvider>
-//   ))
-//   .add('Hover override: root styles', () => (
-//     <Wrapper styles={{ root: { '&:hover': { backgroundColor: 'red' } } }} />
-//   ))
-//   .add('Hover override: css', () => <Wrapper css={{ '&:hover': { backgroundColor: 'red' } }} />);
+storiesOf('@vident-ui/core/Button/styles-api', module)
+  .add('With css', () => <Wrapper css={{ border: '1px solid red', backgroundColor: 'blue' }} />)
+  .add('With styles as object', () => <Wrapper styles={styles} />)
+  .add('With styles as function', () => <Wrapper styles={() => styles} />)
+  .add('With styles as classNames', () => <WithClassNames />)
+  .add('Styles API on VidentProvider', () => (
+    <VidentProvider styles={{ Button: () => styles }}>
+      <Wrapper />
+    </VidentProvider>
+  ))
+  .add('Hover override: root styles', () => (
+    <Wrapper styles={{ root: { '&:hover': { backgroundColor: 'red' } } }} />
+  ))
+  .add('Hover override: css', () => <Wrapper css={{ '&:hover': { backgroundColor: 'red' } }} />);
