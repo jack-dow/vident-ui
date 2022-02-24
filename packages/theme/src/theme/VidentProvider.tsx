@@ -97,7 +97,7 @@ export function VidentProvider({
 
   useEffect(() => {
     if (!isBrowser || !userThemes) return;
-    setTheme(userThemes[currentTheme].className || 'system', userThemes.base);
+    setTheme(userThemes[currentTheme]?.className || 'system', userThemes.base);
   }, [isBrowser, currentTheme, userThemes]);
 
   const providerValue = useMemo(() => {

@@ -581,39 +581,15 @@ const defaultUtils = {
   }),
 
   // Display / flex utilities
-  d: (value: PropertyValue<'display'>) => ({ display: value }),
   dflex: (value: PropertyValue<'alignItems'>) => ({
     display: 'flex',
     alignItems: value,
     justifyContent: value,
   }),
-  fd: (value: PropertyValue<'flexDirection'>) => ({
-    flexDirection: value,
-  }),
-  fw: (value: PropertyValue<'flexWrap'>) => ({ flexWrap: value }),
-  ai: (value: PropertyValue<'alignItems'>) => ({
-    alignItems: value,
-  }),
-  ac: (value: PropertyValue<'alignContent'>) => ({
-    alignContent: value,
-  }),
-  jc: (value: PropertyValue<'justifyContent'>) => ({
-    justifyContent: value,
-  }),
-  as: (value: PropertyValue<'alignSelf'>) => ({
-    alignSelf: value,
-  }),
-  fg: (value: PropertyValue<'alignSelf'>) => ({ flexGrow: value }),
-  fb: (value: PropertyValue<'alignSelf'>) => ({
-    flexBasis: value,
-  }),
 
   // background alias util
   bg: (value: PropertyValue<'background'>) => ({
     background: value,
-  }),
-  bc: (value: PropertyValue<'backgroundColor'>) => ({
-    backgroundColor: value,
   }),
   bgColor: (value: PropertyValue<'backgroundColor'>) => ({
     backgroundColor: value,
@@ -674,7 +650,6 @@ const defaultUtils = {
   }),
 
   // Util to add both line height and text size at once
-
   text: (value: PropertyValue<'fontSize'>) => ({
     ...(defaultTextSizes[value?.toString() as keyof typeof defaultTextSizes] ?? {
       fontSize: value,

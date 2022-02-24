@@ -172,7 +172,6 @@ export default createStyles(
       },
 
       label: {
-        whiteSpace: 'nowrap',
         height: '100%',
         overflow: 'hidden',
         display: 'flex',

@@ -5,12 +5,10 @@ export function itSupportsCss(Component: React.ElementType, requiredProps: Recor
   it('supports css', async () => {
     const styles = { border: '1px solid aquamarine', background: 'beige' };
     const fn = () => styles;
-    const { container: withFunction } = render(<Component {...requiredProps} css={fn} />);
-    const { container: withObject } = render(
-      <Component {...requiredProps} css={styles} style={undefined} />
-    );
+    const { container: withFunction } = render(<Component {...requiredProps} sx={fn} />);
+    const { container: withObject } = render(<Component {...requiredProps} sx={styles} />);
 
-    expect(withFunction.firstChild).toHaveStyle('background: "red"');
-    expect(withObject.firstChild).toHaveStyle({ background: 'beige' });
+    expect(withFunction.firstChild).toHaveStyle(styles);
+    expect(withObject.firstChild).toHaveStyle(styles);
   });
 }

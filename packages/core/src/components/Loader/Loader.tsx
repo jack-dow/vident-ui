@@ -12,11 +12,21 @@ const LOADERS = {
   dots: Dots,
 } as const;
 
-export interface LoaderProps
-  extends Vident.DefaultProps,
-    Omit<React.ComponentPropsWithoutRef<'svg'>, 'color' | 'css'> {
-  /** Defines width of loader */
-  size?: Vident.ThemeToken<'space'>;
+export interface LoaderOwnProps extends Vident.DefaultProps {
+  /** Sets both width and height to a predefined size token or any valid css width or height property */
+  size?: Vident.ThemeToken<'sizes'>;
+
+  /** Sets width to a predefined size token or any valid css width property */
+  width?: Vident.ThemeToken<'sizes'>;
+
+  /** Sets height to a predefined size token or any valid css height property */
+  height?: Vident.ThemeToken<'sizes'>;
+
+  /** Sets maxWidth to a predefined size token or any valid css maxWidth property */
+  maxWidth?: Vident.ThemeToken<'sizes'>;
+
+  /** Sets maxHeight to a predefined size token or any valid css maxHeight property */
+  maxHeight?: Vident.ThemeToken<'sizes'>;
 
   /** Loader color from theme */
   color?: Vident.ThemeToken<'colors', string>;
@@ -25,7 +35,20 @@ export interface LoaderProps
   variant?: Vident.LoaderType;
 }
 
-export function Loader({ size = '$6', color, variant = 'oval', css, ...loaderProps }: LoaderProps) {
+export type LoaderProps = Vident.Merge<React.ComponentPropsWithoutRef<'svg'>, LoaderOwnProps>;
+
+export function Loader(props: LoaderProps) {
+  const {
+    size,
+    width,
+    maxWidth,
+    height,
+    maxHeight,
+    color,
+    variant = 'oval',
+    css,
+    ...loaderProps
+  } = props;
   const {
     theme,
     utils: { mode },
@@ -39,7 +62,10 @@ export function Loader({ size = '$6', color, variant = 'oval', css, ...loaderPro
       as={LOADERS[defaultLoader]}
       css={[
         {
-          width: size,
+          width: width || size || '$6',
+          maxWidth: maxWidth,
+          height: height || size,
+          maxHeight: maxHeight,
           color: color || mode(`$${theme.primaryColor}600`, `$${theme.primaryColor}700`),
         },
         css,
