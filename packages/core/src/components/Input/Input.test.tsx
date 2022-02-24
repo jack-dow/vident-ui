@@ -7,7 +7,7 @@ import {
   itSupportsWrapperProps,
   itSupportsInputIcons,
   itSupportsInputSections,
-} from '@vident-ui/utils';
+} from '@vident-ui/testing';
 import { Input } from './Input';
 
 const defaultProps: React.ComponentProps<typeof Input> = {};

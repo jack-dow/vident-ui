@@ -14,7 +14,7 @@ export interface UseStylesOptions<Key extends string> {
   name: string;
 }
 
-export function createStyles<Key extends string = string, Params = null>(
+export function createStyles<Key extends string = string, Params = void | null>(
   getCssObjectOrCssObject:
     | ((
         helpers: { theme: Theme; utils: Utils },

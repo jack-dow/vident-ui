@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { itRendersChildren, itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/utils';
+import { itRendersChildren, itIsPolymorphic, itSupportsSystemProps } from '@vident-ui/testing';
 import { Text } from './Text';
 
 const defaultProps: React.ComponentProps<typeof Text> = {

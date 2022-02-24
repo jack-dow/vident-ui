@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/utils';
+import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/testing';
 import { InputWrapper, InputWrapperProps } from './InputWrapper';
 
 const defaultProps: InputWrapperProps = {
@@ -38,9 +38,9 @@ describe('@vident-ui/core/InputWrapper', () => {
       />
     );
 
-    expect(queries.getLabel(container).textContent).toBe('test-label');
-    expect(queries.getDescription(container).textContent).toBe('test-description');
-    expect(queries.getError(container).textContent).toBe('test-error');
+    expect(queries.getLabel(container)?.textContent).toBe('test-label');
+    expect(queries.getDescription(container)?.textContent).toBe('test-description');
+    expect(queries.getError(container)?.textContent).toBe('test-error');
   });
 
   it('does not render error if error prop is boolean', () => {

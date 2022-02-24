@@ -33,7 +33,7 @@ export default createStyles(
   (
     { theme },
     {
-      color = theme.colors?.gray400,
+      color = theme.colors?.gray500,
       variant,
       size,
       lineClamp = 3,

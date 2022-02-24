@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react';
 import { ThemeToken } from '@vident-ui/theme';
+
 import { ActionIcon } from '../ActionIcon';
 import { CloseIcon } from './CloseIcon';
 import { Box } from '../../Box';

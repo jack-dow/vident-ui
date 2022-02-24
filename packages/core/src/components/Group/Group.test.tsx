@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/utils';
+import { itRendersChildren, itSupportsSystemProps } from '@vident-ui/testing';
 import { Group } from './Group';
 
 const defaultProps: React.ComponentProps<typeof Group> = {};

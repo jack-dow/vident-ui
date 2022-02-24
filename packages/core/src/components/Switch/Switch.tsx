@@ -8,7 +8,7 @@ import { useId, useBooleanToggle } from '@vident-ui/hooks';
 import type * as Vident from '@vident-ui/theme';
 import { Keys } from '../../utils';
 import { Box } from '../Box';
-import useStyles, { SwitchSizes } from './Switch.styles';
+import useStyles, { SwitchSize } from './Switch.styles';
 import { isDisabledReactIssue7711 } from './isDisabledReactIssue7711';
 
 export type SwitchStylesNames = Vident.ClassNames<typeof useStyles>;
@@ -35,7 +35,7 @@ export interface SwitchProps
   color?: Vident.Color;
 
   /** Predefined size value */
-  size?: SwitchSizes;
+  size?: SwitchSize;
 
   /** Predefined border-radius value from theme or any valid border-radius value */
   radius?: Vident.ThemeToken<'radii'>;

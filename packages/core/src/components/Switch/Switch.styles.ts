@@ -1,10 +1,10 @@
 import { createStyles, Color, ThemeToken, get } from '@vident-ui/theme';
 
-export type SwitchSizes = keyof typeof switchHeight;
+export type SwitchSize = keyof typeof switchHeight;
 
 interface SwitchStyles {
   color?: Color;
-  size: SwitchSizes;
+  size: SwitchSize;
   radius: ThemeToken<'radii'>;
   checked: boolean;
 }
@@ -32,14 +32,6 @@ const handleSizes = {
   lg: '$7',
   xl: '$8',
 };
-
-export const sizes = Object.keys(switchHeight).reduce((acc: any, size) => {
-  acc[size] = {
-    width: switchWidth[size as keyof typeof switchWidth],
-    height: switchHeight[size as keyof typeof switchWidth],
-  };
-  return acc;
-}, {} as Record<SwitchSizes, { width: number; height: number }>);
 
 export default createStyles(
   (
