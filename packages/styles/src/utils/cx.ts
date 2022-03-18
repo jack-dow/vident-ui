@@ -1,4 +1,4 @@
-import clsx from './clsx';
+import { clsx } from './clsx';
 import { css } from '../theme/stitches.config';
 import type { CSSObject } from '../theme';
 import { merge } from './merge';

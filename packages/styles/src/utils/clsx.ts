@@ -32,7 +32,7 @@ function toVal(mix: any) {
   return str;
 }
 
-export default function (...args: any[]) {
+export function clsx(...args: any[]) {
   let i = 0;
   let tmp;
   let x;

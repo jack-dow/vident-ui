@@ -1,4 +1,4 @@
-import clsx from '../utils/clsx';
+import { clsx } from '../utils';
 
 /**
  * Returns active theme according to the given document
