@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ActionIcon, Text, NORMAL_COLORS } from '@vident-ui/core';
+import { ActionIcon, Text, Box, DEFAULT_COLORS } from '@vident-ui/core';
 import { useBooleanToggle } from '@vident-ui/hooks';
 import { EyeIcon, EyeOffIcon } from '@heroicons/react/outline';
 
@@ -17,23 +17,23 @@ function TestWrapper({ variant, color }: { variant: any; color: any }) {
           <EyeOffIcon style={{ width: 20, height: 20 }} />
         )}
       </ActionIcon>
-      <Text className="select-none pl-2 capitalize">{variant}</Text>
+      <Text className="pl-2 capitalize select-none">{variant}</Text>
     </div>
   );
 }
 
 export const ActionIconDemo = () => {
   return (
-    <div className="flex w-full justify-between">
-      {NORMAL_COLORS.map((color) => (
-        <div className="mt-4 space-y-2">
-          <Text className="select-none capitalize">{color}</Text>
-          <div className="space-y-4">
+    <div className="flex flex-wrap justify-between w-full">
+      {DEFAULT_COLORS.map((color) => (
+        <Box css={{ mt: '$4', spaceY: '$2' }}>
+          <Text className="capitalize select-none">{color}</Text>
+          <Box css={{ spaceY: '$4' }}>
             {variants.map((variant) => (
               <TestWrapper variant={variant} color={color} />
             ))}
-          </div>
-        </div>
+          </Box>
+        </Box>
       ))}
     </div>
   );
