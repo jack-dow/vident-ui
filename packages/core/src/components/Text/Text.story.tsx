@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { createStyles, VidentProvider } from '@vident-ui/theme';
+import { createStyles, VidentProvider } from '@vident-ui/styles';
 
 import { Text } from './Text';
 

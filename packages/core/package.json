@@ -20,7 +20,7 @@
     "@popperjs/core": "^2.9.3",
     "@stitches/core": "^1.2.6",
     "@vident-ui/hooks": "workspace:*",
-    "@vident-ui/theme": "workspace:*",
+    "@vident-ui/styles": "workspace:*",
     "react-popper": "^2.2.5",
     "react-textarea-autosize": "^8.3.3"
   },

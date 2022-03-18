@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React, { forwardRef } from 'react';
-import { DefaultProps } from '@vident-ui/theme';
+import { DefaultProps } from '@vident-ui/styles';
 import { Box } from '../../Box';
 import useStyles from './UnstyledButton.styles';
 

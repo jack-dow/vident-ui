@@ -1,4 +1,4 @@
-import { createStyles } from '@vident-ui/theme';
+import { createStyles } from '@vident-ui/styles';
 
 interface InputWrapperStyles {
   hideLabel?: boolean;

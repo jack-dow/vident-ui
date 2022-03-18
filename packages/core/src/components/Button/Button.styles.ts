@@ -5,7 +5,7 @@ import {
   Utils,
   ThemeToken,
   getSharedColorScheme,
-} from '@vident-ui/theme';
+} from '@vident-ui/styles';
 
 export type ButtonVariant = 'filled' | 'outline' | 'light' | 'gradient' | 'white' | 'default';
 

@@ -1,7 +1,7 @@
 import { rgba } from './rgba';
 import { DEFAULT_THEME } from '../../VidentProvider';
 
-describe('@vident-ui/theme/rgba', () => {
+describe('@vident-ui/styles/rgba', () => {
   it('correctly converts colors from hex to rgba', () => {
     expect(rgba('#228BE6', 0.74)(DEFAULT_THEME)).toBe('rgba(34, 139, 230, 0.74)');
     expect(rgba('96f2d7', 0.945)(DEFAULT_THEME)).toBe('rgba(150, 242, 215, 0.945)');

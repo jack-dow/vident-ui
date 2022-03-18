@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { forwardRef } from 'react';
-import { useVidentUtils } from '@vident-ui/theme';
-import type * as Vident from '@vident-ui/theme';
+import { useVidentUtils } from '@vident-ui/styles';
+import type * as Vident from '@vident-ui/styles';
 import { Text } from '../Text';
 import { Box } from '../Box';
 import useStyles from './InputWrapper.styles';

@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
 import { useId } from '@vident-ui/hooks';
-import type * as Vident from '@vident-ui/theme';
+import type * as Vident from '@vident-ui/styles';
 import { Input, InputOwnProps, InputStylesNames, InputSize } from '../Input';
 import {
   InputWrapperOwnProps,

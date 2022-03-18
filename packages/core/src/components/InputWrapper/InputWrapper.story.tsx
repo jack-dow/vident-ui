@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { createStyles, VidentProvider } from '@vident-ui/theme';
+import { createStyles, VidentProvider } from '@vident-ui/styles';
 import { generateBorderStyles } from '@vident-ui/utils';
 import { InputWrapper as InputWrapperStylesApi } from './styles.api';
 // import { paragraph } from '@vident-ui/mockdata';

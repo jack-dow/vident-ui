@@ -1,4 +1,4 @@
-import { createStyles } from '@vident-ui/theme';
+import { createStyles } from '@vident-ui/styles';
 
 export default createStyles(({ theme, utils: { mode } }) => ({
   root: {

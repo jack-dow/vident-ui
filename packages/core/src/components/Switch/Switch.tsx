@@ -5,7 +5,7 @@ import React, {
   MouseEvent as ReactMouseEvent,
 } from 'react';
 import { useId, useBooleanToggle } from '@vident-ui/hooks';
-import type * as Vident from '@vident-ui/theme';
+import type * as Vident from '@vident-ui/styles';
 import { Keys } from '../../utils';
 import { Box } from '../Box';
 import useStyles, { SwitchSize } from './Switch.styles';

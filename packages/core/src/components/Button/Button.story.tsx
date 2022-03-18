@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { DEFAULT_COLORS, createStyles, VidentProvider } from '@vident-ui/theme';
+import { DEFAULT_COLORS, createStyles, VidentProvider } from '@vident-ui/styles';
 import { generateBorderStyles } from '@vident-ui/utils';
 import { ExternalLinkIcon, CalendarIcon } from '@heroicons/react/outline';
 

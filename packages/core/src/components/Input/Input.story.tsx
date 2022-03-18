@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { createStyles, VidentProvider } from '@vident-ui/theme';
+import { createStyles, VidentProvider } from '@vident-ui/styles';
 import { generateBorderStyles, InputStylesApiWrapper } from '@vident-ui/utils';
 import { SearchIcon, MailIcon, QuestionMarkCircleIcon } from '@heroicons/react/solid';
 import Textarea from 'react-textarea-autosize';

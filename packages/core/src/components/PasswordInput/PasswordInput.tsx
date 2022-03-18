@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react';
 import { useBooleanToggle } from '@vident-ui/hooks';
-import { createStyles, get } from '@vident-ui/theme';
-import type * as Vident from '@vident-ui/theme';
+import { createStyles, get } from '@vident-ui/styles';
+import type * as Vident from '@vident-ui/styles';
 import { ActionIcon } from '../ActionIcon';
 import { TextInput, TextInputProps, TextInputStylesNames } from '../TextInput';
 import { PasswordToggleIcon } from './PasswordToggleIcon';
@@ -43,7 +43,6 @@ export const PasswordInput = forwardRef<HTMLInputElement, PasswordInputProps>(
       placeholder = 'Enter your password',
       visibilityToggleIcon: VisibilityToggleIcon = PasswordToggleIcon,
       staticSelector = 'PasswordInput',
-
       ...others
     }: PasswordInputProps,
     ref

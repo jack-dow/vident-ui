@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { VidentProvider } from '@vident-ui/theme';
+import { VidentProvider } from '@vident-ui/styles';
 import { Title } from './Title';
 
 storiesOf('@vident-ui/core/Title/styles-api', module)

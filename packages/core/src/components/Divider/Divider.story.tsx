@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { DEFAULT_COLORS } from '@vident-ui/theme';
+import { DEFAULT_COLORS } from '@vident-ui/styles';
 import { SearchIcon } from '@heroicons/react/solid';
 import { Divider } from './Divider';
 import { Box } from '../Box';

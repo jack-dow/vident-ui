@@ -10,7 +10,7 @@
   "dependencies": {},
   "devDependencies": {
     "@vident-ui/eslint-config": "workspace:*",
-    "@vident-ui/theme": "workspace:*",
+    "@vident-ui/styles": "workspace:*",
     "@vident-ui/tsconfig": "workspace:*",
     "tsup": "^5.10.1"
   },

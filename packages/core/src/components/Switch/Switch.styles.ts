@@ -1,4 +1,4 @@
-import { createStyles, Color, ThemeToken, get } from '@vident-ui/theme';
+import { createStyles, Color, ThemeToken, get } from '@vident-ui/styles';
 
 export type SwitchSize = keyof typeof switchHeight;
 

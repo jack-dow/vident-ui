@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import type * as Vident from '@vident-ui/theme';
+import type * as Vident from '@vident-ui/styles';
 
 import useStyles from './Divider.styles';
 import { Box } from '../Box';

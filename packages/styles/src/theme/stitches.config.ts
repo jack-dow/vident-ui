@@ -1,7 +1,6 @@
 import { createStitches } from '@stitches/core';
 import { merge } from '../utils/merge';
 import defaultTheme from './default-theme';
-import darkTheme from './dark-theme';
 import type { ThemeExtension } from './types';
 
 export const {

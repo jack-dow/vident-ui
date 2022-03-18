@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { DEFAULT_COLORS, VidentProvider } from '@vident-ui/theme';
+import { DEFAULT_COLORS, VidentProvider } from '@vident-ui/styles';
 
 import { Loader, LoaderProps } from './Loader';
 

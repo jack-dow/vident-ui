@@ -8,7 +8,7 @@ const sizes = {
   xl: 18,
 };
 
-describe('@vident-ui/theme/get', () => {
+describe('@vident-ui/styles/get', () => {
   it('returns given value if value type is number', () => {
     expect(get(20, sizes)).toBe(20);
     expect(get(0, sizes)).toBe(0);

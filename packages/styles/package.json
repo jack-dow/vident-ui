@@ -1,5 +1,5 @@
 {
-  "name": "@vident-ui/theme",
+  "name": "@vident-ui/styles",
   "description": "The default theme and styles manager for vident ui",
   "version": "0.0.7",
   "main": "./dist/index.js",

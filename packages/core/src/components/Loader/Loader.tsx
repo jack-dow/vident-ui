@@ -1,5 +1,5 @@
-import { useVidentHelpers } from '@vident-ui/theme';
-import type * as Vident from '@vident-ui/theme';
+import { useVidentHelpers } from '@vident-ui/styles';
+import type * as Vident from '@vident-ui/styles';
 import React from 'react';
 import { Box } from '../Box';
 import { Bars } from './loaders/Bars';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { DefaultProps, ThemeToken, Gradient, Polymorphic } from '@vident-ui/theme';
+import { DefaultProps, ThemeToken, Gradient, Polymorphic } from '@vident-ui/styles';
 import { Box } from '../Box';
 import useStyles from './Text.styles';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { getSharedColorScheme, useVidentUtils } from '@vident-ui/theme';
-import type * as Vident from '@vident-ui/theme';
+import { getSharedColorScheme, useVidentUtils } from '@vident-ui/styles';
+import type * as Vident from '@vident-ui/styles';
 
 import { Box } from '../Box';
 import useStyles, { ActionIconVariant } from './ActionIcon.styles';

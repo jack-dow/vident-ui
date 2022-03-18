@@ -1,4 +1,4 @@
-import { createStyles, Color, Utils, ThemeToken, getSharedColorScheme } from '@vident-ui/theme';
+import { createStyles, Color, Utils, ThemeToken, getSharedColorScheme } from '@vident-ui/styles';
 
 export type ActionIconVariant =
   | 'hover'
@@ -40,9 +40,9 @@ function getVariantStyles({ variant, utils, color }: GetVariantStyles) {
   const colors = getSharedColorScheme({ utils, color, variant });
 
   return {
-    backgroundColor: colors.background,
-    color: colors.color,
     border: `1px solid ${colors.border}`,
+    color: colors.color,
+    backgroundColor: colors.background,
 
     '&:hover': {
       backgroundColor: colors.hover,

@@ -1,5 +1,5 @@
 import * as React from 'react';
-export * from '@vident-ui/theme';
+export * from '@vident-ui/styles';
 
 export * from './components/ActionIcon';
 export * from './components/Box';

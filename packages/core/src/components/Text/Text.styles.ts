@@ -1,4 +1,4 @@
-import { createStyles, ThemeToken, CSSObject, linearGradient } from '@vident-ui/theme';
+import { createStyles, ThemeToken, CSSObject, linearGradient } from '@vident-ui/styles';
 
 interface TextStyles {
   color?: ThemeToken<'colors', string>;

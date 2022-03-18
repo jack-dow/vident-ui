@@ -1,6 +1,6 @@
 import React from 'react';
-import { createStyles } from '@vident-ui/theme';
-import type { ThemeToken } from '@vident-ui/theme';
+import { createStyles } from '@vident-ui/styles';
+import type { ThemeToken } from '@vident-ui/styles';
 
 export type InputVariant = 'default' | 'unstyled' | 'headless';
 export type InputSize = keyof typeof sizes;

@@ -1,6 +1,6 @@
 import { linearGradient, radialGradient } from './gradient';
 
-describe('@vident-ui/theme/linear-gradient', () => {
+describe('@vident-ui/styles/linear-gradient', () => {
   it('returns correct gradient with two color stops', () => {
     expect(linearGradient(24, '#000', '#fff')).toBe('linear-gradient(24deg, #000 0%, #fff 100%)');
   });
@@ -12,7 +12,7 @@ describe('@vident-ui/theme/linear-gradient', () => {
   });
 });
 
-describe('@vident-ui/theme/radial-gradient', () => {
+describe('@vident-ui/styles/radial-gradient', () => {
   it('returns correct gradient with two color stops', () => {
     expect(radialGradient('#000', '#fff')).toBe('radial-gradient(circle, #000 0%, #fff 100%)');
   });

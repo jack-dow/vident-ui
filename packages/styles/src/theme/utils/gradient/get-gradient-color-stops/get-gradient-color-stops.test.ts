@@ -1,6 +1,6 @@
 import { getGradientColorStops } from './get-gradient-color-stops';
 
-describe('@vident-ui/theme/get-gradient-color', () => {
+describe('@vident-ui/styles/get-gradient-color', () => {
   it('returns correct color steps', () => {
     expect(getGradientColorStops(['#000', '#fff'])).toBe('#000 0%, #fff 100%');
     expect(getGradientColorStops(['blue', 'red', 'orange', 'cyan', 'white'])).toBe(

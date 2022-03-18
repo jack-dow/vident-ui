@@ -1,6 +1,6 @@
 import React, { forwardRef } from 'react';
-import { useExtractedCss, cx } from '@vident-ui/theme';
-import type * as Vident from '@vident-ui/theme';
+import { useExtractedCss, cx } from '@vident-ui/styles';
+import type * as Vident from '@vident-ui/styles';
 
 export const Box = forwardRef((props, ref) => {
   const { as: Element = 'div', css, className, ...boxProps } = props;

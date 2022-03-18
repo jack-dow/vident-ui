@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { DEFAULT_COLORS } from '@vident-ui/theme';
+import { DEFAULT_COLORS } from '@vident-ui/styles';
 import { useId } from '@vident-ui/hooks';
 import { Switch, SwitchProps } from './Switch';
 import type { SwitchSize } from './Switch.styles';

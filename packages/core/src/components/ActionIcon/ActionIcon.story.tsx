@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { VidentProvider, createStyles, DEFAULT_COLORS } from '@vident-ui/theme';
+import { VidentProvider, createStyles, DEFAULT_COLORS } from '@vident-ui/styles';
 import { generateBorderStyles } from '@vident-ui/utils';
 import { useBooleanToggle } from '@vident-ui/hooks';
 import { EyeIcon, EyeOffIcon } from '@heroicons/react/outline';

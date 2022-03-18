@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { storiesOf } from '@storybook/react';
-import { createStyles, VidentProvider } from '@vident-ui/theme';
+import { createStyles, VidentProvider } from '@vident-ui/styles';
 import { generateBorderStyles, InputStylesApiWrapper } from '@vident-ui/utils';
 import { PasswordInput as PasswordInputStylesApi } from './styles.api';
 import { INPUT_SIZES } from '../Input';

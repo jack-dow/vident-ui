@@ -1,4 +1,4 @@
-import { createStyles, ThemeToken } from '@vident-ui/theme';
+import { createStyles, ThemeToken } from '@vident-ui/styles';
 
 interface DividerStyles {
   size?: ThemeToken<'sizes'>;

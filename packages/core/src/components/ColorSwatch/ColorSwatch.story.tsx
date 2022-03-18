@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { DEFAULT_COLORS, useVidentUtils, VidentProvider, createStyles } from '@vident-ui/theme';
+import { DEFAULT_COLORS, useVidentUtils, VidentProvider, createStyles } from '@vident-ui/styles';
 import { generateBorderStyles } from '@vident-ui/utils';
 import { Group } from '../Group';
 import { ColorSwatch } from './ColorSwatch';

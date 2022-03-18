@@ -1,5 +1,5 @@
 import React from 'react';
-import type * as Vident from '@vident-ui/theme';
+import type * as Vident from '@vident-ui/styles';
 
 import useStyles, { InputVariant, InputSize } from './Input.styles';
 import { Box } from '../Box';

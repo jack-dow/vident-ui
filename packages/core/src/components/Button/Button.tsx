@@ -1,5 +1,5 @@
 import React from 'react';
-import type * as Vident from '@vident-ui/theme';
+import type * as Vident from '@vident-ui/styles';
 
 import useStyles, { ButtonVariant, sizes } from './Button.styles';
 import { Loader } from '../Loader';

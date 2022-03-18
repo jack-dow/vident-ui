@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThemeToken, createStyles } from '@vident-ui/theme';
+import { ThemeToken, createStyles } from '@vident-ui/styles';
 
 export type GroupPosition = 'right' | 'center' | 'left' | 'apart';
 
