@@ -1,13 +1,17 @@
-import { Button } from '../components/Button/Button';
+import { Button } from '@vident-ui/core';
 import { useBooleanToggle } from '@vident-ui/hooks';
 
+import { useStore } from '../lib/store';
+import { Layout } from '../components/Layout';
+
 export default function Docs() {
-  const [checked, toggle] = useBooleanToggle();
+  const ActiveComponent = useStore((state) => state.ActiveComponent);
 
   return (
-    <div>
-      <div>Playground!!</div>
-      <Button>This is a button</Button>
-    </div>
+    <Layout>
+      <div className="flex h-full w-full items-start justify-center p-8">
+        {ActiveComponent ? <ActiveComponent /> : <div>No component selected</div>}
+      </div>
+    </Layout>
   );
 }
